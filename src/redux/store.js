@@ -10,7 +10,6 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import logger from 'redux-logger';
 import contactsReducer from './reducer';
 
 const contactsPersistConfig = {
@@ -25,7 +24,6 @@ const middleware = [
       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
     },
   }),
-  logger,
 ];
 
 const store = configureStore({
